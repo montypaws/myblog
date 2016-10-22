@@ -20,6 +20,7 @@ git的安装比较简单，此处只做粗略介绍
 
 - 设定用户名，命令如下：
 `git config --global user.name "yourusername"`
+
 - 设定联系邮箱，命令如下：
 `git config --global user.email "youremailaddress"`
 
@@ -32,8 +33,10 @@ git的安装比较简单，此处只做粗略介绍
 
   - 生成SSH密钥，并添加SSH代理。
   打开终端，输入以下命令：`ssh-keygen -t rsa -b 4096 -C "youremailaddress"`根据提示，即可生成你的SSH密钥。
+
   - 在github账户上添加SSH密钥
   进入github网站，登录之后，点击右上角账户->`Setting`->`SSH and GPG keys`->`New SSH key`,将`~/.ssh/id_rsa.pub`中的内容添加到key中，Title随便填写即可。
+
   - 检测SSH链接，输入以下命令：`ssh -T git@gith输入ub.com`,然后输入 解锁密钥即可。
 
 （三） 使用
@@ -56,6 +59,7 @@ git的安装比较简单，此处只做粗略介绍
 
   - 暂存区或以Master分支：应该先执行`git reset HEAD <filename>`，然后执行`git checkout <filename>`
 
+
 8. 创建分支：
 
  - 创建分支：`git branch branchname`
@@ -64,6 +68,9 @@ git的安装比较简单，此处只做粗略介绍
  - 回到主分支：`git checkout master`
  - 合并分支：`git merge branchname`
  - 删除分支：`git branch -d branchname`
+
+8. 创建分支：创建分支：`git branch branchname`进入分支：`git checkout branchname`,创建并进入分支：`git checkout -b branchname`，回到主分支：`git checkout master`,合并分支：`git merge branchname`,删除分支：`git branch -d branchname`
+
 
 9.  配置缩写：如果你厌倦了使用繁琐的命令，可以借助于alias配置缩写
   ```git
@@ -75,10 +82,10 @@ git的安装比较简单，此处只做粗略介绍
 
 10. 查看工作区和缓存区的不同，命令：`git diff <filename>`.
 
-
 11. 远程仓库
 
 - 关联本地仓库与远程仓库：`git remote add <remotename> <SSHURL/HTTPSURL>`,URL可以通过创建远程仓库时获得
+
 - 推送到远程仓库
   `git push <remotename> <remoteBranch>`
 
