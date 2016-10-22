@@ -3,28 +3,28 @@
 ## git的安装和配置
 （一） 安装
 
-git的安装比较简单，此处只做粗略介绍
- 1. windows平台
+  git的安装比较简单，此处只做粗略介绍
+   1. windows平台
 
-  windows只需要安装对应的安装包即可，使用`cmder`软件的用户可以不用再安装git
+    windows只需要安装对应的安装包即可，使用`cmder`软件的用户可以不用再安装git
 
- 2. Ubuntu平台
+   2. Ubuntu平台
 
- 打开终端（`Ctrl+Alt+T`）,输入`sudo apt intall git`,输入用户密码即可完成安装。
+    打开终端（`Ctrl+Alt+T`）,输入`sudo apt intall git`,输入用户密码即可完成安装。
 
 （ 二）配置
 
-配置不需区分平台，各平台使用的命令基本相同，配置过程如下：
+  配置不需区分平台，各平台使用的命令基本相同，配置过程如下：
 
 （1）设定用户名和用户邮箱
 
-- 设定用户名，命令如下：
+  - 设定用户名，命令如下：
 `git config --global user.name "yourusername"`
 
-- 设定联系邮箱，命令如下：
+  - 设定联系邮箱，命令如下：
 `git config --global user.email "youremailaddress"`
 
-**说明：** 使用`git config`指令的`--global`参数表示机器上所有的git仓库都使用该用户名和用户邮箱，当不使用该参数是可以对不同的仓库指定不同的用户名和邮箱
+  **说明：** 使用`git config`指令的`--global`参数表示机器上所有的git仓库都使用该用户名和用户邮箱，当不使用该参数是可以对不同的仓库指定不同的用户名和邮箱
 
 （2）生成SSH密钥
   -  检查SSH密钥是否存在，打开终端，输入以下命令：
