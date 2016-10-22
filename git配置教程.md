@@ -59,7 +59,6 @@ git的安装比较简单，此处只做粗略介绍
 
   - 暂存区或以Master分支：应该先执行`git reset HEAD <filename>`，然后执行`git checkout <filename>`
 
-
 8. 创建分支：
 
  - 创建分支：`git branch branchname`
@@ -69,7 +68,6 @@ git的安装比较简单，此处只做粗略介绍
  - 合并分支：`git merge branchname`
  - 删除分支：`git branch -d branchname`
 
-8. 创建分支：创建分支：`git branch branchname`进入分支：`git checkout branchname`,创建并进入分支：`git checkout -b branchname`，回到主分支：`git checkout master`,合并分支：`git merge branchname`,删除分支：`git branch -d branchname`
 
 
 9.  配置缩写：如果你厌倦了使用繁琐的命令，可以借助于alias配置缩写
@@ -81,6 +79,7 @@ git的安装比较简单，此处只做粗略介绍
   ```
 
 10. 查看工作区和缓存区的不同，命令：`git diff <filename>`.
+
 
 11. 远程仓库
 
