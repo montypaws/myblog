@@ -62,3 +62,52 @@ linux有内核（kernel）和用户（user）两种模式，内核、shell、文
 ## linux内核
 linux内核结构哦如下图所示：
 ![linux 内核](./picture/linux_Kermel.png)
+
+Linux 将内存划分为容易处理的“内存页”，提供了对 4KB 缓冲区的抽象，例如 slab 分配器。进程实际是某特定应用程序的一个运行实体，进程调度控制进程对CPU的访问。Linux 中常见的进程间通讯机制有信号、管道、共享内存、信号量和套接字等。 内核通过 SCI 提供了一个API来创建一个新进程（fork、exec 或 POSⅨ），停止进程（kill、exit），并在它们之间进行通信和同步（signal 或者 POSⅨ 机制）。
+
+Linux 操作系统将独立的文件系统组合成了一个层次化的树形结构，并且由一个单独的实体代表这一文件系统。由于 Linux 支持许多不同的文件系统，并且将它们组织成了一个统一的虚拟文件系统.设备驱动程序提供一组操作系统可理解的抽象接口完成和操作系统之间的交互，而与硬件相关的具体操作细节由设备驱动程序完成。Linux内核的网络部分由BSD套接字、网络协议层和网络设备驱动程序组成。 网络设备驱动程序负责与硬件设备通讯，每一种可能的硬件设备都有相应的设备驱动程序。
+
+## linux文件目录
+
+|目录名|简要说明|
+|:----:|:----:|
+|/bin |二进制可执行命令|
+|/dev |	设备特殊文件|
+|/etc |	系统管理和配置文件|
+|/etc/rc.d |	启动的配置文件和脚本|
+|/home| 	用户主目录的基点，比如用户abc的主目录就是/home/user，可以用~abc表示|
+|/lib |	标准程序设计库|
+|/sbin| 	系统管理命令，这里存放的是系统管理员使用的管理程序|
+|/tmp |	公用的临时文件存储点|
+|/root |	系统管理员的主目录|
+|/mnt |	系统提供这个目录是让用户临时挂载其他的文件系统。|
+|/lost+found |	这个目录平时是空的，系统非正常关机而留下“无家可归”的文件|
+|/proc |	虚拟的目录，是系统内存的映射。可直接访问这个目录来获取系统信息。|
+|/var |	某些大文件的溢出区，比方说各种服务的日志文件|
+|/usr | 	最庞大的目录，要用到的应用程序和文件几乎都在这个目录。|
+
+
+|/usr子目录|简要说明|
+|:---:|:---:|
+|/usr/X11R6|存放X window的目录|
+|/usr/bin |众多的应用程序|
+|/usr/sbin |超级用户的一些管理程序|
+|/usr/doc |linux文档|
+|/usr/include |linux下开发和编译应用程序所需要的头文件|
+|/usr/lib |常用的动态链接库和软件包的配置文件|
+|/usr/man| 帮助文档|
+|/usr/src |源代码，linux内核的源代码就放在/usr/src/linux里|
+|/usr/local/bin| 本地增加的命令|
+|/usr/local/lib |本地增加的库|
+
+## shell
+shell是系统的用户界面，提供了用户与内核进行交互操作的一种接口。它接收用户输入的命令并把它送入内核去执行，是一个命令解释器。shell 有很多类型，这里推荐BASH。BASH是GNU的Bourne Again Shell，是GNU操作系统上默认的shell,大部分linux的发行套件使用的都是这种shell。Linux Shell 及命令如下图所示：
+![linux Shell](./picture/shell.jpeg)
+
+在shell 中组织linux 的命令来完成一系列的任务，就是shell 编程了。Shell，Perl和Python 是Linux 上最常用的脚本语言，我还是推荐使用Python。
+
+
+## linux应用软件
+### 文本编辑器
+Linux下常用的文本编辑器有：gedit，vim，atom，Emmacs，sublime Text3，本人用过vim，gedit，atom，推荐使用vim，atom，sublime Text3,这三种的可定制行都较强，配合对应的插件，可以作为IDE使用，因此推荐使用，vim的常用命令：
+![Vim 命令](./picture/Vim.gif)
